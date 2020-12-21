@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 
 	"github.com/tommaso-borgato/go-server/util"
@@ -13,6 +14,11 @@ func hello(w http.ResponseWriter, req *http.Request) {
 }
 
 func main() {
+	fmt.Printf("START\n")
 	http.HandleFunc("/", hello)
-	http.ListenAndServe(":8080", nil)
+	err := http.ListenAndServe(":8080", nil)
+	if err != nil {
+		log.Fatal("ListenAndServe: ", err)
+	}
+	fmt.Printf("END\n")
 }
