@@ -1,4 +1,4 @@
-# Simple HTTP server
+# Simple GO HTTP server
 
 This is a simple example showing how-to create a simple GO web app and then package it inside an "OpenShift ready" container;
 
