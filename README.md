@@ -2,12 +2,6 @@
 
 This is a simple example showing how-to create a simple GO web app and then package it inside an "OpenShift ready" container;
 
-## project setup
-
-```
-go mod init github.com/tommaso-borgato/go-server
-```
-
 ## build
 
 ```
@@ -42,3 +36,6 @@ curl localhost:8080
 ```
 sudo buildah images
 ```
+
+
+> NOTE: initial GO module setup: `go mod init github.com/tommaso-borgato/go-server`
